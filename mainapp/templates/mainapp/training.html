@@ -1,0 +1,17 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+{% block content %}
+
+<div id="content" class="training" data-url="{% url 'page2' %}">
+	<h4 class="text-center">To Click, or Not to Click?</h4>
+	<img src="{% static 'mainapp/assets/click or not.png'%}" style="height: 250px;" class="mx-auto d-block" />
+	<div class="alert alert-primary mt-4" role="alert">
+	    <h5 class="text-center">You just received an email about one of your passwords. Slow down and think things through. How do you know if it's legit?</h5>
+	</div>
+	<hr>
+</div>
+<div class="mb-4">
+	<button id="page2" type="button" class="btn btn-danger btn-lg float-right mb-4">Next <i class="fas fa-arrow-circle-right"></i></button>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+  	<head>
+    	<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	    <title>Phishing Campaign Quiz</title>
+	</head>
+	<body>
+
+<!-- 		<script type="text/javascript">
+			alert('OOPS YOU HAVE BEEN PHISHED!')
+		</script> -->
+
+		<nav class="navbar navbar-light bg-dark">
+		  	<a class="navbar-brand" href="#">
+		    	<img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+		  	</a>
+		</nav>
+		
+	  	<div class="container border mt-2">
+	  		<div class="row mt-4">
+	  			<div class="col-sm">
+
+
+	  				<h2 class="text-center">Phishing Campaign Awareness Training</h2>
+	  				<hr>
+
+	  				<div id="content">
+
+	  					<h4 class="text-center">This wasn’t a real attack, but it could have been.</h4>
+						<img src="{% static 'mainapp/assets/phished.jpg' %}" style="height: 250px;" class="mx-auto d-block" /><br>
+						<p class="text-center">In cooperation with InfoSec Cyber Awareness, Phishing Campaign performs simulated attacks just like this one to educate employees on the dangers of phishing and social engineering</p>
+						<p class="text-center">Because you fell for this simulated attack, InfoSec team has enrolled you in a brief training. Click the button below to complete the required training.</p>
+						<!-- <button type="button" class="btn btn-primary btn-lg mb-4 mx-auto d-block">Start Training</button> -->
+						<a href="{% url 'start-training' %}" class="btn btn-primary btn-lg mb-4 mx-auto d-block">Go to Training</a>
+						<p class="text-center"><b>Full Disclosure: </b>Training progress is recorded and reported to InfoSec team. Don't say we didn't warn you!</p>
+						<em class="text-center mb-4">P.S. KEEP THIS QUIET FOR NOW. NOT EVERYONE HAS CHECKED THEIR EMAIL, AND WE WOULDN'T WANT THEM TO HAVE AN UNFAIR ADVANTAGE.</em>
+
+					</div> <!-- content -->
+
+					<!-- Button back and next -->
+
+	  			</div> <!-- col -->
+	  		</div> <!-- row -->
+	  	</div> <!-- container -->
+
+
+
+	    <!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- Custom JS -->
+		<script src="{% static 'mainapp/js/main.js' %}"></script>
+	</body>
+</html>
