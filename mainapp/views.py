@@ -21,6 +21,3 @@ def training(request):
 
 def page2(request):
 	return render(request, 'mainapp/page2.html')
-
-def test(request):
-	return render(request, 'mainapp/test.html')
