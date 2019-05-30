@@ -27,6 +27,6 @@ class UsersModel(models.Model):
 		)
 
 
-	name = models.CharField(max_length=30, verbose_name="Name")
-	department = models.CharField(max_length=20, choices=department_choices, verbose_name="Department")
-	email = models.EmailField(max_length=30, verbose_name="Email")
+	name = models.CharField(max_length=40, verbose_name="Full Name")
+	department = models.CharField(max_length=40, choices=department_choices, verbose_name="Department")
+	email = models.EmailField(max_length=100, verbose_name="Email")
