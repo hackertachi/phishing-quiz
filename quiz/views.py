@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import QuizForm
+from mainapp.forms import UsersModelForm
 
 def quiz(request):
     if request.method == 'POST':
@@ -34,4 +35,16 @@ def quiz(request):
     return render(request, 'quiz/quiz.html', context)
 
 def completed(request):
-    return render(request, 'quiz/completed.html')
+    if request.method == 'POST':
+        usersmodelform = UsersModelForm(request.POST)
+        if usersmodelform.is_valid():
+            usersmodelform.save()
+            return redirect('congrats')
+
+    usersmodelform = UsersModelForm()
+    context = {'usersmodelform': usersmodelform}
+
+    return render(request, 'quiz/completed.html', context)
+
+def congrats(request):
+    return render(request, 'quiz/congrats.html')

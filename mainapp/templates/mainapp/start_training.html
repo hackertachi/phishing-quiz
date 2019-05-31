@@ -29,19 +29,17 @@
 	  				<hr>
 
 	  				<h4 class="text-center">Credential Harvesting</h4>
-					<img src="{% static 'mainapp/assets/credential harvesting.jpg' %}" style="height: 250px;" class="mx-auto d-block" />
-					<form method="POST">
-						{% csrf_token %}
-						<div class="form-group">
-							{{ usersmodelform|crispy }}
-						</div>
-					<em><b>Disclosure: </b>We are getting this information to record users who will take this training.</em>
+					<img src="{% static 'mainapp/assets/credential harvesting.jpg' %}" style="height: 250px;" class="mx-auto my-3 d-block" />
+
+					<b>About this training:</b>
+					<p>Login credentials, such as your email, username, and password, are a valuable commodity for criminals. Because many people reuse passwords across online services, criminals know that a single username and password could be their ticket to corporate networks and email, bank accounts, social media, and more.</p>
+					<p>This training will introduce you to the techniques attackers will often use to try and trick you into unknowingly giving away your credentials.</p>
+					<p>Please complete this training as soon as possible. We hope you enjoy!</p>
 
 					
-						<hr>
-						<div class="mb-4">
-							<button type="submit" class="btn btn-success btn-lg mx-auto d-block mb-4">Start Training</button>
-					</form>
+					<hr>
+						<div class="text-center mb-4">
+							<a href="{% url 'training' %}" class="btn btn-success btn-lg mx-auto"> Start Training</a>
 						</div>
 						<br>
 						<br>
