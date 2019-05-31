@@ -1,0 +1,15 @@
+{% extends "quiz/base.html" %}
+{% block content %}
+
+{% if messages %}
+	{% for message in messages %}
+		<p class="text-center">{{ message }}</p>
+	{% endfor %}
+{% endif %}
+
+<div class="text-center my-5">
+	<a href="{% url 'quiz' %}" class="btn btn-primary mx-2 col-3">Take the quiz again</a>
+	<a href="" class="btn btn-success mx-2 col-3">Done</a>
+</div>
+
+{% endblock content %}
