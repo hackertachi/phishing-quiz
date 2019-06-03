@@ -1,0 +1,23 @@
+{% extends "quiz/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if messages %}
+	{% for message in messages %}
+		<div class="alert alert-danger" role="alert">
+			<p>{{ message }}</p>
+		</div>
+	{% endfor %}
+{% endif %}
+
+<form method="POST">
+	<div class="form-group">
+		{% csrf_token %}
+		{{ quizform|crispy }}	
+		<hr>
+		<button type="submit" class="btn btn-success float-right mb-5">Submit</button>
+	</div>
+</form>
+
+
+{% endblock content %}

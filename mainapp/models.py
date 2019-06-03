@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 
 class UsersModel(models.Model):
@@ -24,9 +25,13 @@ class UsersModel(models.Model):
 		('Tax Compliance', 'Tax Compliance'),
 		('Financial Planning', 'Financial Planning'),
 		('Opcom', 'Opcom'),
-		)
+	)
 
 
+	date = models.DateTimeField(default=datetime.now)
 	name = models.CharField(max_length=40, verbose_name="Full Name")
 	department = models.CharField(max_length=40, choices=department_choices, verbose_name="Department")
 	email = models.EmailField(max_length=100, verbose_name="Email")
+
+	def __str__(self):
+		return self.name

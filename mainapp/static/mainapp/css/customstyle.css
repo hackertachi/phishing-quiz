@@ -1,0 +1,20 @@
+#id_description {
+	height: 100px;
+	width: 100%;
+}
+
+#alertmessage {
+	margin-bottom: 0px;
+	height: 45px;
+}
+
+.alert-error {
+	color: #fff;
+	background-color: #f86c6b;
+	border-color: #f86c6b;
+}
+
+#id_remarks {
+	height: 100px;
+	width: 100%;
+}

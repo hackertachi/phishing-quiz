@@ -1,0 +1,27 @@
+{% extends "quiz/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+{% if messages %}
+	{% for message in messages %}
+		<div class="alert alert-success" role="alert">
+			<h5 class="text-center">{{ message }}</h5>
+		</div>
+	{% endfor %}
+{% endif %}
+
+<form method="POST">
+	<div class="form-group">
+		{% csrf_token %}
+		{{ usersmodelform|crispy }}
+	</div>
+
+	<em><b>Disclosure: </b>We are getting this information to record users who finished the training.</em>
+
+	<div class="my-5">
+		<a href="{% url 'quiz' %}" class="btn btn-primary mx-2 col-3">Take the quiz again</a>
+		<button class="btn btn-success mx-2 col-3 float-right" type="submit">Done</button>
+	</div>
+</form>
+
+{% endblock content %}
