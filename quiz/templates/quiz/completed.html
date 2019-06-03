@@ -4,7 +4,9 @@
 
 {% if messages %}
 	{% for message in messages %}
-		<h5 class="text-center">{{ message }}</h5>
+		<div class="alert alert-success" role="alert">
+			<h5 class="text-center">{{ message }}</h5>
+		</div>
 	{% endfor %}
 {% endif %}
 

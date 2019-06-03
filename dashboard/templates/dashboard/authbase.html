@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Phishing Campaign Admin Dashboard</title>
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'mainapp/css/customstyle.css' %}">
+
+    <!-- Icons-->
+    <link href="{% static 'mainapp/vendors/@coreui/icons/css/coreui-icons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendors/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendors/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+
+    <!-- Main styles for this application-->
+    <link href="{% static 'mainapp/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'mainapp/vendors/pace-progress/css/pace.min.css' %}" rel="stylesheet">
+  </head>
+
+  <body class="app flex-row mt-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card-group">
+            
+            {% block content %} {% endblock content %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="{% static 'mainapp/vendors/jquery/js/jquery.min.js' %}"></script>
+    <script src="{% static 'mainapp/vendors/popper.js/js/popper.min.js' %}"></script>
+    <script src="{% static 'mainapp/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'mainapp/vendors/pace-progress/js/pace.min.js' %}"></script>
+    <script src="{% static 'mainapp/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'mainapp/vendors/@coreui/coreui/js/coreui.min.js' %}"></script>
+  </body>
+</html>
