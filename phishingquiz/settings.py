@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'quiz',
     'dashboard',
     'crispy_forms',
+    'widget_tweaks',
+    'import_export',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
